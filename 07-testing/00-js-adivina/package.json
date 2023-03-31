@@ -8,7 +8,6 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest",
-    "test:watch": "npm test -- --watchAll -i",
     "coverage": "vitest run --coverage"
   },
   "devDependencies": {
