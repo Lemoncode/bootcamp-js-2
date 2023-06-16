@@ -16,6 +16,7 @@ function eventLoop() {
   while (colaDeTareas.length > 0) {
     // Obtener la próxima tarea de la cola
     const tarea = colaDeTareas.shift();
+    console.log(colaDeTareas.length);
 
     // Ejecutar la tarea
     ejecutarTarea(tarea);
@@ -23,9 +24,9 @@ function eventLoop() {
 
   // Si no hay más tareas en la cola, pausar el event loop
   // hasta que se agregue una nueva tarea
+
   if (colaDeTareas.length === 0) {
     console.log("Event Loop en pausa.");
-    return;
   }
 
   // Volver a ejecutar el event loop en el próximo ciclo de eventos
@@ -56,5 +57,5 @@ eventLoop();
 
 setTimeout(() => {
   //Fijate que lo puedo ejecutar a pesar de que el Event Loop  lo hayamos lanzado
-  tarea3();
-}, 5000);
+  encolarTarea(tarea3);
+}, 1000);
