@@ -1,11 +1,9 @@
-import "./style.css";
-
 // Definir una cola de tareas
 const colaDeTareas = [];
 
 // Función para agregar una tarea a la cola
-function encolarTareas(task) {
-  colaDeTareas.push(task);
+function encolarTarea(tarea) {
+  colaDeTareas.push(tarea);
 }
 
 // Función para ejecutar una tarea
@@ -13,18 +11,26 @@ function ejecutarTarea(task) {
   task();
 }
 
-// Función principal del event loop
+// Event loop
 function eventLoop() {
   while (colaDeTareas.length > 0) {
     // Obtener la próxima tarea de la cola
-    const task = colaDeTareas.shift();
+    const tarea = colaDeTareas.shift();
 
     // Ejecutar la tarea
-    ejecutarTarea(task);
+    ejecutarTarea(tarea);
   }
 
-  // Si no hay más tareas en la cola, finalizar el event loop
-  console.log("Event loop finished.");
+  // Si no hay más tareas en la cola, pausar el event loop
+  // hasta que se agregue una nueva tarea
+  if (colaDeTareas.length === 0) {
+    console.log("Event Loop en pausa.");
+    return;
+  }
+
+  // Volver a ejecutar el event loop en el próximo ciclo de eventos
+  // Es decir, dejo que se ejecute código que estaba esperando
+  setTimeout(eventLoop, 0);
 }
 
 // Ejemplos de tareas
@@ -37,13 +43,18 @@ function tarea2() {
   console.log("Task 2 executed.");
 }
 
-function tareaCierreNavegador() {
-  console.log("Cierra Navegador.");
+function tarea3() {
+  console.log("Task 3 - Yo voy más tarde...");
 }
 
 // Agregar tareas a la cola
-encolarTareas(tarea1);
-encolarTareas(tarea2);
+encolarTarea(tarea1);
+encolarTarea(tarea2);
 
 // Iniciar el event loop
 eventLoop();
+
+setTimeout(() => {
+  //Fijate que lo puedo ejecutar a pesar de que el Event Loop  lo hayamos lanzado
+  tarea3();
+}, 5000);
