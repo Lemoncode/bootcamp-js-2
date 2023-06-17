@@ -24,7 +24,6 @@ function eventLoop() {
 
   // Si no hay más tareas en la cola, pausar el event loop
   // hasta que se agregue una nueva tarea
-
   if (colaDeTareas.length === 0) {
     console.log("Event Loop en pausa.");
   }
@@ -35,17 +34,16 @@ function eventLoop() {
 }
 
 // Ejemplos de tareas
-
 function tarea1() {
-  console.log("Task 1 executed.");
+  console.log("Tarea 1 ejecutada.");
 }
 
 function tarea2() {
-  console.log("Task 2 executed.");
+  console.log("Tarea 2 ejecutada.");
 }
 
 function tarea3() {
-  console.log("Task 3 - Yo voy más tarde...");
+  console.log("Tarea 3 - Yo voy más tarde...");
 }
 
 // Agregar tareas a la cola
@@ -56,6 +54,6 @@ encolarTarea(tarea2);
 eventLoop();
 
 setTimeout(() => {
-  //Fijate que lo puedo ejecutar a pesar de que el Event Loop  lo hayamos lanzado
+  //Fíjate que lo puedo ejecutar a pesar de que el Event Loop  lo hayamos lanzado
   encolarTarea(tarea3);
 }, 1000);
