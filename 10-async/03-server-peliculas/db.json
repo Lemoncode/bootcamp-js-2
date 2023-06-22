@@ -383,21 +383,21 @@
       "name": "Benedict Cumberbatch",
       "movies": ["9", "21"],
       "bio": "Benedict Cumberbatch is an English actor. He portrayed the character Stephen Strange/Doctor Strange in the Marvel Cinematic Universe.",
-      "image": "benedict_cumberbatch.jpg"
+      "image": "https://raw.githubusercontent.com/Lemoncode/bootcamp-js-2/main/10-async/03-server-peliculas/assets/actors/benedict-cumberbatch.jpg"
     },
     {
       "id": "21",
       "name": "Chadwick Boseman",
       "movies": ["9", "10", "11", "12", "13"],
       "bio": "Chadwick Boseman was an American actor. He played the role of T'Challa/Black Panther in the Marvel Cinematic Universe.",
-      "image": "chadwick_boseman.jpg"
+      "image": "https://raw.githubusercontent.com/Lemoncode/bootcamp-js-2/main/10-async/03-server-peliculas/assets/actors/chadwick-boseman.jpg"
     },
     {
       "id": "22",
       "name": "Brie Larson",
       "movies": ["10", "22"],
       "bio": "Brie Larson is an American actress. She portrayed the character Carol Danvers/Captain Marvel in the Marvel Cinematic Universe.",
-      "image": "brie_larson.jpg"
+      "image": "https://raw.githubusercontent.com/Lemoncode/bootcamp-js-2/main/10-async/03-server-peliculas/assets/actors/brie-larson.webp"
     },
     {
       "id": "23",
@@ -418,7 +418,7 @@
       "name": "Anthony Mackie",
       "movies": ["7", "8", "17", "22", "24"],
       "bio": "Anthony Mackie is an American actor. He portrayed the character Sam Wilson/Falcon in the Marvel Cinematic Universe.",
-      "image": "anthony_mackie.jpg"
+      "image": "https://raw.githubusercontent.com/Lemoncode/bootcamp-js-2/main/10-async/03-server-peliculas/assets/actors/anthony-mackie.jpg"
     },
     {
       "id": "26",
