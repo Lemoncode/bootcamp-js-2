@@ -1,0 +1,64 @@
+{
+  "habitaciones": [
+    {
+      "id": "1",
+      "nombre": "Benalmádena",
+      "tipo": "Individual",
+      "precio": 120
+    },
+    {
+      "id": "2",
+      "nombre": "Cádiz",
+      "tipo": "Doble",
+      "precio": 180
+    },
+    {
+      "id": "3",
+      "nombre": "Estepona",
+      "tipo": "Suite",
+      "precio": 300
+    },
+    {
+      "id": "4",
+      "nombre": "Fuengirola",
+      "tipo": "Familiar",
+      "precio": 220
+    },
+    {
+      "id": "5",
+      "nombre": "Granada",
+      "tipo": "Individual",
+      "precio": 130
+    },
+    {
+      "id": "6",
+      "nombre": "Alcalá del Valle",
+      "tipo": "Doble",
+      "precio": 190
+    },
+    {
+      "id": "7",
+      "nombre": "Huelva",
+      "tipo": "Suite",
+      "precio": 320
+    },
+    {
+      "id": "8",
+      "nombre": "Jaén",
+      "tipo": "Familiar",
+      "precio": 240
+    },
+    {
+      "id": "9",
+      "nombre": "Málaga",
+      "tipo": "Individual",
+      "precio": 110
+    },
+    {
+      "id": "10",
+      "nombre": "Sevilla",
+      "tipo": "Doble",
+      "precio": 170
+    }
+  ]
+}
