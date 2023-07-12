@@ -94,7 +94,7 @@
       "especialidad": "Agente encubierta",
       "habilidades": ["Cambios de apariencia", "Seducción", "Manejo de armas"],
       "amigo": "",
-      "imagen": "https://ejemplo.com/imagenes/senorita_irma.jpg"
+      "imagen": "./irma.webp"
     },
     {
       "id": 10,
