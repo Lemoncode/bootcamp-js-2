@@ -1,0 +1,109 @@
+{
+  "personajes": [
+    {
+      "id": 1,
+      "nombre": "Mortadelo",
+      "apodo": "Mortadelo",
+      "especialidad": "Disfraces",
+      "habilidades": ["Camuflaje", "Imitaciones", "Huida rápida"],
+      "amigo": "Filemón",
+      "imagen": "https://ejemplo.com/imagenes/mortadelo.jpg"
+    },
+    {
+      "id": 2,
+      "nombre": "Filemón",
+      "apodo": "Filemón",
+      "especialidad": "Ingeniería improvisada",
+      "habilidades": ["Inventor", "Construcción rápida", "Cálculos mentales"],
+      "amigo": "Mortadelo",
+      "imagen": "https://ejemplo.com/imagenes/filemon.jpg"
+    },
+    {
+      "id": 3,
+      "nombre": "Ofelia",
+      "apodo": "Ofelia",
+      "especialidad": "Inteligencia",
+      "habilidades": ["Investigación", "Hacker", "Descifrado de códigos"],
+      "amigo": "Rompetechos",
+      "imagen": "https://ejemplo.com/imagenes/ofelia.jpg"
+    },
+    {
+      "id": 4,
+      "nombre": "Bacterio",
+      "apodo": "Bacterio",
+      "especialidad": "Inventor loco",
+      "habilidades": [
+        "Creación de inventos disparatados",
+        "Explosiones accidentales"
+      ],
+      "amigo": "",
+      "imagen": "https://ejemplo.com/imagenes/bacterio.jpg"
+    },
+    {
+      "id": 5,
+      "nombre": "Rompetechos",
+      "apodo": "Rompetechos",
+      "especialidad": "Desastre andante",
+      "habilidades": [
+        "Despiste total",
+        "Accidentes cómicos",
+        "Agilidad para escapar"
+      ],
+      "amigo": "Ofelia",
+      "imagen": "https://ejemplo.com/imagenes/rompetechos.jpg"
+    },
+    {
+      "id": 6,
+      "nombre": "Filemón Jr.",
+      "apodo": "Junior",
+      "especialidad": "Espionaje",
+      "habilidades": [
+        "Sigilo",
+        "Inteligencia emocional",
+        "Combate cuerpo a cuerpo"
+      ],
+      "amigo": "Mortadelo",
+      "imagen": "https://ejemplo.com/imagenes/filemon_jr.jpg"
+    },
+    {
+      "id": 7,
+      "nombre": "Superintendente Vicente",
+      "apodo": "Super",
+      "especialidad": "Liderazgo",
+      "habilidades": [
+        "Organización",
+        "Toma de decisiones",
+        "Resolución de conflictos"
+      ],
+      "amigo": "",
+      "imagen": "https://ejemplo.com/imagenes/superintendente_vicente.jpg"
+    },
+    {
+      "id": 8,
+      "nombre": "Oficial Ribera",
+      "apodo": "Ribera",
+      "especialidad": "Agente secreto",
+      "habilidades": ["Disparo preciso", "Sigilo", "Conducción extrema"],
+      "amigo": "",
+      "imagen": "https://ejemplo.com/imagenes/oficial_ribera.jpg"
+    },
+    {
+      "id": 9,
+      "nombre": "Señorita Irma",
+      "apodo": "Irma",
+      "especialidad": "Agente encubierta",
+      "habilidades": ["Cambios de apariencia", "Seducción", "Manejo de armas"],
+      "amigo": "",
+      "imagen": "https://ejemplo.com/imagenes/senorita_irma.jpg"
+    },
+    {
+      "id": 10,
+      "nombre": "El Súper",
+      "apodo": "El Súper",
+      "especialidad": "Jefe de la T.I.A.",
+      "habilidades": ["Estrategia", "Organización", "Control de operativos"],
+      "amigo": "",
+      "imagen": "https://ejemplo.com/imagenes/el_super.jpg"
+    }
+  ]
+}
