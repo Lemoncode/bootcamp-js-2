@@ -1,34 +1,34 @@
 {
   "personajes": [
     {
-      "id": 1,
+      "id": "1",
       "nombre": "Mortadelo",
       "apodo": "Mortadelo",
       "especialidad": "Disfraces",
       "habilidades": ["Camuflaje", "Imitaciones", "Huida rápida"],
       "amigo": "Filemón",
-      "imagen": "https://ejemplo.com/imagenes/mortadelo.jpg"
+      "imagen": "./mortadelo.webp"
     },
     {
-      "id": 2,
+      "id": "2",
       "nombre": "Filemón",
       "apodo": "Filemón",
       "especialidad": "Ingeniería improvisada",
       "habilidades": ["Inventor", "Construcción rápida", "Cálculos mentales"],
       "amigo": "Mortadelo",
-      "imagen": "https://ejemplo.com/imagenes/filemon.jpg"
+      "imagen": "./filemon.webp"
     },
     {
-      "id": 3,
+      "id": "3",
       "nombre": "Ofelia",
       "apodo": "Ofelia",
       "especialidad": "Inteligencia",
       "habilidades": ["Investigación", "Hacker", "Descifrado de códigos"],
       "amigo": "Rompetechos",
-      "imagen": "https://ejemplo.com/imagenes/ofelia.jpg"
+      "imagen": "./ofelia.webp"
     },
     {
-      "id": 4,
+      "id": "4",
       "nombre": "Bacterio",
       "apodo": "Bacterio",
       "especialidad": "Inventor loco",
@@ -37,10 +37,10 @@
         "Explosiones accidentales"
       ],
       "amigo": "",
-      "imagen": "https://ejemplo.com/imagenes/bacterio.jpg"
+      "imagen": "./bacterio.webp"
     },
     {
-      "id": 5,
+      "id": "5",
       "nombre": "Rompetechos",
       "apodo": "Rompetechos",
       "especialidad": "Desastre andante",
@@ -50,23 +50,10 @@
         "Agilidad para escapar"
       ],
       "amigo": "Ofelia",
-      "imagen": "https://ejemplo.com/imagenes/rompetechos.jpg"
+      "imagen": "./rompetechos.webp"
     },
     {
-      "id": 6,
-      "nombre": "Filemón Jr.",
-      "apodo": "Junior",
-      "especialidad": "Espionaje",
-      "habilidades": [
-        "Sigilo",
-        "Inteligencia emocional",
-        "Combate cuerpo a cuerpo"
-      ],
-      "amigo": "Mortadelo",
-      "imagen": "https://ejemplo.com/imagenes/filemon_jr.jpg"
-    },
-    {
-      "id": 7,
+      "id": "6",
       "nombre": "Superintendente Vicente",
       "apodo": "Super",
       "especialidad": "Liderazgo",
@@ -76,19 +63,10 @@
         "Resolución de conflictos"
       ],
       "amigo": "",
-      "imagen": "https://ejemplo.com/imagenes/superintendente_vicente.jpg"
+      "imagen": "./superintendente.webp"
     },
     {
-      "id": 8,
-      "nombre": "Oficial Ribera",
-      "apodo": "Ribera",
-      "especialidad": "Agente secreto",
-      "habilidades": ["Disparo preciso", "Sigilo", "Conducción extrema"],
-      "amigo": "",
-      "imagen": "https://ejemplo.com/imagenes/oficial_ribera.jpg"
-    },
-    {
-      "id": 9,
+      "id": "7",
       "nombre": "Señorita Irma",
       "apodo": "Irma",
       "especialidad": "Agente encubierta",
@@ -97,13 +75,31 @@
       "imagen": "./irma.webp"
     },
     {
-      "id": 10,
-      "nombre": "El Súper",
-      "apodo": "El Súper",
-      "especialidad": "Jefe de la T.I.A.",
-      "habilidades": ["Estrategia", "Organización", "Control de operativos"],
+      "id": "8",
+      "nombre": "Director Filemón",
+      "apodo": "Director",
+      "especialidad": "Gestión estratégica",
+      "habilidades": ["Toma de decisiones", "Planificación", "Coordinación"],
       "amigo": "",
-      "imagen": "https://ejemplo.com/imagenes/el_super.jpg"
+      "imagen": "./director-general.webp"
+    },
+    {
+      "id": "9",
+      "nombre": "Bestiajez",
+      "apodo": "Bestiajez",
+      "especialidad": "Fuerza bruta",
+      "habilidades": ["Fuerza", "Resistencia", "Agilidad"],
+      "amigo": "",
+      "imagen": "./bestiajez.webp"
+    },
+    {
+      "id": "10",
+      "nombre": "Patrona",
+      "apodo": "Patrona",
+      "especialidad": "Agente encubierta",
+      "habilidades": ["Cambios de apariencia", "Seducción", "Manejo de armas"],
+      "amigo": "",
+      "imagen": "./patrona.jpg"
     }
   ]
 }
