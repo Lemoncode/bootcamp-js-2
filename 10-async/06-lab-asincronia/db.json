@@ -7,7 +7,7 @@
       "especialidad": "Disfraces",
       "habilidades": ["Camuflaje", "Imitaciones", "Huida rápida"],
       "amigo": "Filemón",
-      "imagen": "./mortadelo.webp"
+      "imagen": "mortadelo.webp"
     },
     {
       "id": "2",
@@ -16,7 +16,7 @@
       "especialidad": "Ingeniería improvisada",
       "habilidades": ["Inventor", "Construcción rápida", "Cálculos mentales"],
       "amigo": "Mortadelo",
-      "imagen": "./filemon.webp"
+      "imagen": "filemon.webp"
     },
     {
       "id": "3",
@@ -25,7 +25,7 @@
       "especialidad": "Inteligencia",
       "habilidades": ["Investigación", "Hacker", "Descifrado de códigos"],
       "amigo": "Rompetechos",
-      "imagen": "./ofelia.webp"
+      "imagen": "ofelia.webp"
     },
     {
       "id": "4",
@@ -37,7 +37,7 @@
         "Explosiones accidentales"
       ],
       "amigo": "",
-      "imagen": "./bacterio.webp"
+      "imagen": "bacterio.webp"
     },
     {
       "id": "5",
@@ -50,7 +50,7 @@
         "Agilidad para escapar"
       ],
       "amigo": "Ofelia",
-      "imagen": "./rompetechos.webp"
+      "imagen": "rompetechos.webp"
     },
     {
       "id": "6",
@@ -63,7 +63,7 @@
         "Resolución de conflictos"
       ],
       "amigo": "",
-      "imagen": "./superintendente.webp"
+      "imagen": "superintendente.webp"
     },
     {
       "id": "7",
@@ -72,7 +72,7 @@
       "especialidad": "Agente encubierta",
       "habilidades": ["Cambios de apariencia", "Seducción", "Manejo de armas"],
       "amigo": "",
-      "imagen": "./irma.webp"
+      "imagen": "irma.webp"
     },
     {
       "id": "8",
@@ -81,7 +81,7 @@
       "especialidad": "Gestión estratégica",
       "habilidades": ["Toma de decisiones", "Planificación", "Coordinación"],
       "amigo": "",
-      "imagen": "./director-general.webp"
+      "imagen": "director-general.webp"
     },
     {
       "id": "9",
@@ -90,7 +90,7 @@
       "especialidad": "Fuerza bruta",
       "habilidades": ["Fuerza", "Resistencia", "Agilidad"],
       "amigo": "",
-      "imagen": "./bestiajez.webp"
+      "imagen": "bestiajez.webp"
     },
     {
       "id": "10",
@@ -99,7 +99,34 @@
       "especialidad": "Agente encubierta",
       "habilidades": ["Cambios de apariencia", "Seducción", "Manejo de armas"],
       "amigo": "",
-      "imagen": "./patrona.jpg"
+      "imagen": "patrona.jpg"
+    },
+    {
+      "id": "11",
+      "nombre": "Agente Besuguio",
+      "apodo": "Besuguio",
+      "especialidad": "Desastre total",
+      "habilidades": ["Meteduras de pata", "Caídas accidentales", "Confusión constante"],
+      "amigo": "",
+      "imagen": "besuguio.webp"
+    },
+    {
+      "id": "12",
+      "nombre": "Agente Borríquez",
+      "apodo": "Borríquez",
+      "especialidad": "Torpeza extrema",
+      "habilidades": ["Caídas constantes", "Desorientación total", "Destrucción involuntaria"],
+      "amigo": "",
+      "imagen": "borriquez.webp"
+    },
+    {
+      "id": "13",
+      "nombre": "Agente Boñiguez",
+      "apodo": "Boñiguez",
+      "especialidad": "Olor fétido",
+      "habilidades": ["Mal olor", "Repulsión involuntaria", "Confusión nasal"],
+      "amigo": "",
+      "imagen": "boniguez.webp"
     }
   ]
 }
