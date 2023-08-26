@@ -12,7 +12,7 @@ export const NavbarComponent: React.FC = () => {
       <ul className={classes.list}>
         <li
           className={
-            location.pathname.startsWith(routesPrefixes.accountList)
+            pathname.startsWith(routesPrefixes.accountList)
               ? classes.selected
               : ""
           }
@@ -21,9 +21,7 @@ export const NavbarComponent: React.FC = () => {
         </li>
         <li
           className={
-            location.pathname.startsWith(routesPrefixes.transfer)
-              ? classes.selected
-              : ""
+            pathname.startsWith(routesPrefixes.transfer) ? classes.selected : ""
           }
         >
           <Link to={appRoutes.transfer}>Transferencias</Link>
