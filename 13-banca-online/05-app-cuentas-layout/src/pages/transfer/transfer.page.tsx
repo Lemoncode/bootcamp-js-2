@@ -1,5 +1,10 @@
 import React from "react";
+import { AppLayout } from "@/layouts";
 
 export const TransferPage: React.FC = () => {
-  return <div>Transfer</div>;
+  return (
+    <AppLayout>
+      <div>Transfer</div>
+    </AppLayout>
+  );
 };
