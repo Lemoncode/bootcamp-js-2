@@ -1,0 +1,45 @@
+.header {
+  background: var(--primary_color);
+}
+
+.header > div {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 1em;
+  height: 100%;
+  padding: 20px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header_logo {
+  width: 200px;
+}
+
+.usuario {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+.usuario p:before {
+  content: "";
+  background: url(assets/icon-user.svg) no-repeat center center;
+  width: 40px;
+  height: 15px;
+  position: relative;
+  left: 0;
+  top: 0;
+  padding-right: 20px;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 500px) {
+  .header > div {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+}
