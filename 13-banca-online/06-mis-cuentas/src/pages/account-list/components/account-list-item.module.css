@@ -1,0 +1,5 @@
+.body-table {
+  display: grid;
+  grid-template-columns: 30% 12% repeat(2, 17%) 1fr;
+  gap: 1px;
+}
