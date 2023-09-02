@@ -2,6 +2,7 @@ import React from "react";
 import { AppLayout } from "@/layouts";
 import { AccountVm } from "./account-list.vm";
 import classes from "./account-list.page.module.css";
+import { AccountListTableComponent } from "./components/account-list-table.component";
 
 const mockAccountListData: AccountVm[] = [
   {
@@ -38,11 +39,7 @@ export const AccountListPage: React.FC = () => {
           <h1>Mis cuentas</h1>
           <button>AGREGAR NUEVA CUENTA</button>
         </div>
-        {accountList.map((account) => (
-          <div key={account.id}>
-            {account.name} - {account.balance}
-          </div>
-        ))}
+        <AccountListTableComponent accountList={accountList} />
       </div>
     </AppLayout>
   );
