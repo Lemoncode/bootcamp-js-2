@@ -1,6 +1,7 @@
 import React from "react";
 import { AppLayout } from "@/layouts";
 import { AccountVm } from "./account-list.vm";
+import classes from "./account-list.page.module.css";
 
 const mockAccountListData: AccountVm[] = [
   {
@@ -32,8 +33,11 @@ export const AccountListPage: React.FC = () => {
 
   return (
     <AppLayout>
-      <div>
-        Account List
+      <div className={classes.root}>
+        <div className={classes.headerContainer}>
+          <h1>Mis cuentas</h1>
+          <button>AGREGAR NUEVA CUENTA</button>
+        </div>
         {accountList.map((account) => (
           <div key={account.id}>
             {account.name} - {account.balance}
