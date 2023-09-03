@@ -1,6 +1,7 @@
 import React from "react";
 import { AccountVm } from "../account-list.vm";
 import classes from "./account-list-table.component.module.css";
+import { AccountListItemComponent } from "./account-list-item.component";
 
 interface Props {
   accountList: AccountVm[];
@@ -21,9 +22,7 @@ export const AccountListTableComponent: React.FC<Props> = (props) => {
         </div>
 
         {accountList.map((account) => (
-          <div key={account.id}>
-            {account.name} - {account.balance}
-          </div>
+          <AccountListItemComponent key={account.id} accountItem={account} />
         ))}
       </div>
     </>
