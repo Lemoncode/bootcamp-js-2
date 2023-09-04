@@ -1,0 +1,194 @@
+:root {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* colors */
+  --primary_color: #22c6cb;
+  --secondary_color: #232c3b;
+  --primary_color_darker: #1d9ea8;
+  --error_color: #f44336;
+  --element-border-color: #e5e5e5;
+  --element-radius: 10px;
+  --table-header-color: var(--secondary_color);
+  --table-header-background-color: #ccc;
+  --table-header-font-size: 16px;
+  --table-header-font-weight: 900;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+body {
+  min-width: 320px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* overflow: hidden; */
+}
+
+body > :first-child {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  max-width: 100%;
+  /* overflow: hidden; */
+}
+
+h1 {
+  line-height: 1.1;
+}
+
+input {
+  display: flex;
+  border-radius: var(--element-radius);
+  border: 1px solid var(--element-border-color);
+  padding: 0.8em 1em;
+  margin-bottom: 10px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  border: 1px solid #ddd;
+  width: 100%;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #22c6cb;
+  border: none;
+  padding: 0.8em 1.5em;
+  border-radius: var(--element-radius);
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 900;
+  transition: all ease 0.2s;
+}
+
+button:hover {
+  background: var(--primary_color_darker);
+}
+
+button:active {
+  box-shadow: inset 0 2px 0 0 rgba(0, 0, 0, 0.1),
+    inset 0 2px 2px 2px rgba(0, 0, 0, 0.2), inset 0 0 2px 2px rgba(0, 0, 0, 0.1);
+}
