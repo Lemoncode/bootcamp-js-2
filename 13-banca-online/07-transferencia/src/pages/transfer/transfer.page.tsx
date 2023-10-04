@@ -1,4 +1,5 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import { AppLayout } from "@/layouts";
 import { AccountVm, TransferVm } from "./transfer.vm";
 import { TransferFormComponent } from "./components";
@@ -7,9 +8,11 @@ import {
   mapAccountFromApiToVm,
   mapTransferFromVmToApi,
 } from "./transfer.mapper";
+
 import classes from "./transfer.page.module.css";
 
 export const TransferPage: React.FC = () => {
+  const { id } = useParams<{ id: string }>();
   const [accountList, setAccountList] = React.useState<AccountVm[]>([]);
 
   React.useEffect(() => {
@@ -37,6 +40,7 @@ export const TransferPage: React.FC = () => {
         <TransferFormComponent
           accountList={accountList}
           onTransfer={handleTransfer}
+          defaultAccountId={id}
         />
       </div>
     </AppLayout>

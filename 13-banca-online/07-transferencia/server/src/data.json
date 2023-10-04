@@ -108,5 +108,17 @@
       "accountId": "3"
     }
   ],
-  "transfer": []
+  "transfer": [
+    {
+      "accountId": "1",
+      "iban": "DE91100000000123456789",
+      "name": "Braulio",
+      "amount": "123",
+      "concept": "test",
+      "notes": "test",
+      "transferDate": "Wed Oct 04 2023",
+      "realTransferDate": "",
+      "id": 1
+    }
+  ]
 }

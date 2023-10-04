@@ -12,10 +12,11 @@ import classes from "./transfer-form.component.module.css";
 interface Props {
   accountList: AccountVm[];
   onTransfer: (transferInfo: TransferVm) => void;
+  defaultAccountId?: string;
 }
 
 export const TransferFormComponent: React.FC<Props> = (props) => {
-  const { accountList, onTransfer } = props;
+  const { accountList, onTransfer, defaultAccountId } = props;
   const [transfer, setTransfer] = React.useState<TransferVm>(
     createEmptyTransferVm()
   );
@@ -33,6 +34,15 @@ export const TransferFormComponent: React.FC<Props> = (props) => {
       onTransfer(transfer);
     }
   };
+
+  React.useEffect(() => {
+    if (defaultAccountId) {
+      setTransfer((prevTransfer) => ({
+        ...prevTransfer,
+        accountId: defaultAccountId,
+      }));
+    }
+  }, []);
 
   const handleFieldChange = (
     e:
