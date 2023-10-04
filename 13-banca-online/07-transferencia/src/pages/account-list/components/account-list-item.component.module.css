@@ -1,0 +1,47 @@
+.row {
+  display: grid;
+  grid-template-columns: 30% 12% repeat(2, 17%) 1fr;
+  gap: 1px;
+}
+
+.row:nth-child(odd) {
+  background-color: #eeeeee;
+}
+
+.data-cell {
+  font-size: 16px;
+  padding: 15px;
+  color: #232c3b;
+  align-self: center;
+}
+
+.data-cell a {
+  text-decoration: underline;
+  color: #232c3b;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.select-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.select {
+  font-size: 13px;
+  border-radius: 10px;
+  padding: 8px 10px;
+  width: 90%;
+  cursor: pointer;
+}
+
+.select > option {
+  font-size: 15px;
+}
