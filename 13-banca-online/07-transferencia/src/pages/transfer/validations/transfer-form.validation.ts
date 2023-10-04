@@ -1,4 +1,5 @@
-import { TransferVm, FormValidationResult } from "../transfer.vm";
+import { TransferError, TransferVm } from "../transfer.vm";
+import { FormValidationResult } from "@/common/validations";
 import {
   validateIBANField,
   validateNameField,
@@ -10,7 +11,9 @@ import {
   validateAccountIdField,
 } from "./transfer-field.validation";
 
-export const validateForm = (transfer: TransferVm): FormValidationResult => {
+export const validateForm = (
+  transfer: TransferVm
+): FormValidationResult<TransferError> => {
   const fieldValidationResults = [
     validateAccountIdField(transfer.accountId),
     validateIBANField(transfer.iban),
@@ -22,7 +25,7 @@ export const validateForm = (transfer: TransferVm): FormValidationResult => {
     validateEmailField(transfer.email),
   ];
 
-  const formValidationResult = {
+  const formValidationResult: FormValidationResult<TransferError> = {
     succeeded: fieldValidationResults.every((f) => f.succeeded),
     errors: {
       accountId: fieldValidationResults[0].errorMessage ?? "",

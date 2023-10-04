@@ -4,28 +4,16 @@ import {
   isPositiveNumber,
   isValueNotNullOrUndefined,
   isDateAfterToday,
-  isEMailWellFormed
+  isEMailWellFormed,
+  FieldValidationResult,
+  INVALID_AMOUNT_MESSAGE,
+  INVALID_EMAIL_MESSAGE,
+  INVALID_IBAN_MESSAGE,
+  INVALID_REAL_DATE_TRANSFER_MESSAGE,
+  buildRequiredFieldValidationFailedResponse,
+  buildValidationSucceeded,
+  buildValidationFailedResponse,
 } from "@/common/validations";
-import { FieldValidationResult } from "../transfer.vm";
-
-export const REQUIRED_FIELD_MESSAGE = "Debe informar el campo";
-export const INVALID_IBAN_MESSAGE = "El IBAN no está bien formado";
-export const INVALID_AMOUNT_MESSAGE = "El importe debe ser mayor que 0";
-export const INVALID_REAL_DATE_TRANSFER_MESSAGE =
-  "La fecha de ejecución debe ser posterior a la actual";
-  export const INVALID_EMAIL_MESSAGE = "El email no está bien formado";
-
-const buildValidationFailedResponse = (errorMessage: string) => ({
-  succeeded: false,
-  errorMessage,
-});
-
-const buildValidationSucceeded = () => ({
-  succeeded: true,
-});
-
-const buildRequiredFieldValidationFailedResponse = () =>
-  buildValidationFailedResponse(REQUIRED_FIELD_MESSAGE);
 
 export const validateAccountIdField = (
   value: string
@@ -101,4 +89,3 @@ export const validateEmailField = (value?: string): FieldValidationResult => {
 
   return buildValidationSucceeded();
 };
-
