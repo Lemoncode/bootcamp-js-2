@@ -2,23 +2,32 @@ import React from "react";
 import { AppLayout } from "@/layouts";
 import { AccountVm, TransferVm } from "./transfer.vm";
 import { TransferFormComponent } from "./components";
+import { getAccountList, saveTransfer } from "./api";
+import {
+  mapAccountFromApiToVm,
+  mapTransferFromVmToApi,
+} from "./transfer.mapper";
 import classes from "./transfer.page.module.css";
-
-const accountListMock: AccountVm[] = [
-  { id: "1", alias: "Cuenta principal", iban: "ES91 2100 0418 4502 0005 1332" },
-  { id: "2", alias: "Cuenta ahorro", iban: "ES91 2100 0418 4502 0005 1332" },
-  { id: "3", alias: "Cuenta nómina", iban: "ES91 2100 0418 4502 0005 1332" },
-];
 
 export const TransferPage: React.FC = () => {
   const [accountList, setAccountList] = React.useState<AccountVm[]>([]);
 
   React.useEffect(() => {
-    setAccountList(accountListMock);
+    getAccountList().then((result) => {
+      const accountListVm = result.map(mapAccountFromApiToVm);
+      setAccountList(accountListVm);
+    });
   }, []);
 
   const handleTransfer = (transferInfo: TransferVm) => {
-    console.log(transferInfo);
+    const transfer = mapTransferFromVmToApi(transferInfo);
+    saveTransfer(transfer).then((result) => {
+      if (result) {
+        alert("Transferencia realizada con éxito");
+      } else {
+        alert("Error al realizar la transferencia");
+      }
+    });
   };
 
   return (
