@@ -7,6 +7,7 @@ import {
   createEmptyTransferVm,
 } from "../transfer.vm";
 import { validateForm } from "../validations";
+import classes from "./transfer-form.component.module.css";
 
 interface Props {
   accountList: AccountVm[];
@@ -43,75 +44,110 @@ export const TransferFormComponent: React.FC<Props> = (props) => {
 
   return (
     <div>
-      <h2>Transfer</h2>
       <form onSubmit={handleSubmit}>
-        <div>
-          <label>Seleccione una cuenta origen:</label>
-          <select
-            name="accountId"
-            onChange={handleFieldChange}
-            value={transfer.accountId}
-          >
-            <option value="">Seleccione una cuenta</option>
-            {accountList.map((account) => (
-              <option key={account.id} value={account.id}>
-                {account.alias}
-              </option>
-            ))}
-          </select>
-          <p>{errors.accountId}</p>
-        </div>
-        <div>
-          <label>Ingrese el IBAN de destino:</label>
-          <input name="iban" onChange={handleFieldChange} />
-          <p>{errors.iban}</p>
-        </div>
-        <div>
-          <label>Beneficiario:</label>
-          <input name="name" onChange={handleFieldChange} />
-          <p>{errors.name}</p>
-        </div>
-        <div>
-          <label>
-            Importe <span>(EUR)</span>:
-          </label>
-          <input name="amount" type="number" onChange={handleFieldChange} />
-          <p>{errors.amount}</p>
-        </div>
-        <div>
-          <label>Concepto:</label>
-          <input name="concept" onChange={handleFieldChange} />
-          <p>{errors.concept}</p>
-        </div>
-        <div>
-          <label>Observaciones:</label>
-          <input name="notes" onChange={handleFieldChange} />
-          <p>{errors.notes}</p>
-        </div>
-        <div>
-          <p>
-            Para que la transferencia se realice en otra fecha diferente a la de
-            hoy, por favor, indíquenos la fecha de ejecución:
-          </p>
+        <div className={classes.formContainer}>
           <div>
-            <label>Fecha de ejecución:</label>
+            <label>Seleccione una cuenta origen:</label>
+            <select
+              name="accountId"
+              onChange={handleFieldChange}
+              value={transfer.accountId}
+              className={classes.large}
+            >
+              <option value="">Seleccione una cuenta</option>
+              {accountList.map((account) => (
+                <option key={account.id} value={account.id}>
+                  {account.alias}
+                </option>
+              ))}
+            </select>
+            <p className={classes.error}>{errors.accountId}</p>
+          </div>
+          <div>
+            <label>Ingrese el IBAN de destino:</label>
             <input
-              name="realDateTransfer"
-              type="date"
+              name="iban"
+              className={classes.large}
               onChange={handleFieldChange}
             />
-            <p>{errors.realDateTransfer}</p>
+            <p className={classes.error}>{errors.iban}</p>
           </div>
-        </div>
-        <div>
-          <p>Escriba una dirección de email para dar aviso al beneficiario:</p>
           <div>
-            <label>Email del beneficiario:</label>
-            <input name="email" onChange={handleFieldChange} />
-            <p>{errors.email}</p>
+            <label>Beneficiario:</label>
+            <input
+              name="name"
+              className={classes.large}
+              onChange={handleFieldChange}
+            />
+            <p className={classes.error}>{errors.name}</p>
+          </div>
+          <div>
+            <label>
+              Importe <span>(EUR)</span>:
+            </label>
+            <input
+              className={classes.small}
+              name="amount"
+              type="number"
+              onChange={handleFieldChange}
+            />
+            <p className={classes.error}>{errors.amount}</p>
+          </div>
+          <div>
+            <label>Concepto:</label>
+            <input
+              className={classes.large}
+              name="concept"
+              onChange={handleFieldChange}
+            />
+            <p className={classes.error}>{errors.concept}</p>
+          </div>
+          <div>
+            <label>Observaciones:</label>
+            <input
+              className={classes.large}
+              name="notes"
+              onChange={handleFieldChange}
+            />
+            <p className={classes.error}>{errors.notes}</p>
           </div>
         </div>
-        <button type="submit">REALIZAR LA TRANSFERENCIA</button>
+        <div className={classes.formContainer}>
+          <div>
+            <p>
+              Para que la transferencia se realice en otra fecha diferente a la
+              de hoy, por favor, indíquenos la fecha de ejecución:
+            </p>
+            <div>
+              <label>Fecha de ejecución:</label>
+              <input
+                name="realDateTransfer"
+                type="date"
+                onChange={handleFieldChange}
+              />
+              <p className={classes.error}>{errors.realDateTransfer}</p>
+            </div>
+          </div>
+        </div>
+        <div className={classes.formContainer}>
+          <div>
+            <p>
+              Escriba una dirección de email para dar aviso al beneficiario:
+            </p>
+            <div>
+              <label>Email del beneficiario:</label>
+              <input
+                className={classes.large}
+                name="email"
+                onChange={handleFieldChange}
+              />
+              <p className={classes.error}>{errors.email}</p>
+            </div>
+          </div>
+        </div>
+        <button className={classes.button} type="submit">
+          REALIZAR LA TRANSFERENCIA
+        </button>
       </form>
     </div>
   );

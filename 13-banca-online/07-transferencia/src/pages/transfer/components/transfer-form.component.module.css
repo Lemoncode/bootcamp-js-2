@@ -1,0 +1,49 @@
+.error {
+  color: var(--error_color);
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+}
+
+.account-select {
+  width: 200px;
+}
+
+.form-container {
+  border: none;
+  border-bottom: 1px solid #232c3b;
+  padding: 40px 0;
+}
+
+.button {
+  margin: 10px 0 10px 320px;
+}
+
+.form-container p {
+  font-size: 0.9em;
+  margin-bottom: 20px;
+}
+
+.form-container div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+.form-container div p {
+  margin: 0 10px;
+}
+
+.form-container label {
+  margin-right: 20px;
+  min-width: 300px;
+  text-align: right;
+}
+
+.large {
+  width: 400px;
+}
+
+.small {
+  width: 100px;
+}
