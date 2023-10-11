@@ -11,7 +11,7 @@ import {
   INVALID_IBAN_MESSAGE,
   INVALID_REAL_DATE_TRANSFER_MESSAGE,
   buildRequiredFieldValidationFailedResponse,
-  buildValidationSucceeded,
+  buildValidationSucceededResult,
   buildValidationFailedResult,
 } from "@/common/validations";
 
@@ -22,7 +22,7 @@ export const validateAccountIdField = (
     return buildRequiredFieldValidationFailedResponse();
   }
 
-  return buildValidationSucceeded();
+  return buildValidationSucceededResult();
 };
 
 export const validateIBANField = (value: string): FieldValidationResult => {
@@ -34,7 +34,7 @@ export const validateIBANField = (value: string): FieldValidationResult => {
     return buildValidationFailedResult(INVALID_IBAN_MESSAGE);
   }
 
-  return buildValidationSucceeded();
+  return buildValidationSucceededResult();
 };
 
 export const validateNameField = (value: string): FieldValidationResult => {
@@ -42,7 +42,7 @@ export const validateNameField = (value: string): FieldValidationResult => {
     return buildRequiredFieldValidationFailedResponse();
   }
 
-  return buildValidationSucceeded();
+  return buildValidationSucceededResult();
 };
 
 export const validateAmountField = (value: number): FieldValidationResult => {
@@ -50,7 +50,7 @@ export const validateAmountField = (value: number): FieldValidationResult => {
     return buildValidationFailedResult(INVALID_AMOUNT_MESSAGE);
   }
 
-  return buildValidationSucceeded();
+  return buildValidationSucceededResult();
 };
 
 export const validateConceptField = (value: string): FieldValidationResult => {
@@ -58,34 +58,34 @@ export const validateConceptField = (value: string): FieldValidationResult => {
     return buildRequiredFieldValidationFailedResponse();
   }
 
-  return buildValidationSucceeded();
+  return buildValidationSucceededResult();
 };
 
 export const validateNotesField = (_: string): FieldValidationResult =>
-  buildValidationSucceeded();
+  buildValidationSucceededResult();
 
 export const validateRealDateTransferField = (
   value?: string
 ): FieldValidationResult => {
   if (!isValueNotNullOrUndefined(value)) {
-    return buildValidationSucceeded();
+    return buildValidationSucceededResult();
   }
 
   if (value && !isDateAfterToday(value)) {
     return buildValidationFailedResult(INVALID_REAL_DATE_TRANSFER_MESSAGE);
   }
 
-  return buildValidationSucceeded();
+  return buildValidationSucceededResult();
 };
 
 export const validateEmailField = (value?: string): FieldValidationResult => {
   if (!isValueNotNullOrUndefined(value)) {
-    return buildValidationSucceeded();
+    return buildValidationSucceededResult();
   }
 
   if (value && !isEMailWellFormed(value)) {
     return buildValidationFailedResult(INVALID_EMAIL_MESSAGE);
   }
 
-  return buildValidationSucceeded();
+  return buildValidationSucceededResult();
 };

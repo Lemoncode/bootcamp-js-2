@@ -1,7 +1,7 @@
 import {
   FieldValidationResult,
   buildRequiredFieldValidationFailedResponse,
-  buildValidationSucceeded,
+  buildValidationSucceededResult,
   isStringValueInformed,
 } from "@/common/validations";
 
@@ -10,7 +10,7 @@ export const validateUserField = (value: string): FieldValidationResult => {
     return buildRequiredFieldValidationFailedResponse();
   }
 
-  return buildValidationSucceeded();
+  return buildValidationSucceededResult();
 };
 
 export const validatePasswordField = (value: string): FieldValidationResult => {
@@ -18,5 +18,5 @@ export const validatePasswordField = (value: string): FieldValidationResult => {
     return buildRequiredFieldValidationFailedResponse();
   }
 
-  return buildValidationSucceeded();
+  return buildValidationSucceededResult();
 };

@@ -8,7 +8,7 @@ export const buildValidationFailedResult = (
   errorMessage,
 });
 
-export const buildValidationSucceeded = () => ({
+export const buildValidationSucceededResult = () => ({
   succeeded: true,
 });
 
