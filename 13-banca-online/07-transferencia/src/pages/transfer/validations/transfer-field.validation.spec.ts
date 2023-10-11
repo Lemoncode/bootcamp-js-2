@@ -67,9 +67,8 @@ describe("transfer-field.validation specs", () => {
       // Arrange
       const value = new Date();
       value.setDate(value.getDate() - 1);
-
       // Act
-      const result = validateRealDateTransferField(value);
+      const result = validateRealDateTransferField(value.toISOString());
 
       // Assert
       expect(result.succeeded).toBeFalsy();
@@ -82,7 +81,7 @@ describe("transfer-field.validation specs", () => {
       value.setDate(value.getDate() + 1);
 
       // Act
-      const result = validateRealDateTransferField(value);
+      const result = validateRealDateTransferField(value.toISOString());
 
       // Assert
       expect(result.succeeded).toBeTruthy();

@@ -1,7 +1,7 @@
 import { REQUIRED_FIELD_MESSAGE } from "./validation.const";
 import { FieldValidationResult } from "./validation.model";
 
-export const buildValidationFailedResponse = (
+export const buildValidationFailedResult = (
   errorMessage: string
 ): FieldValidationResult => ({
   succeeded: false,
@@ -14,4 +14,4 @@ export const buildValidationSucceeded = () => ({
 
 export const buildRequiredFieldValidationFailedResponse =
   (): FieldValidationResult =>
-    buildValidationFailedResponse(REQUIRED_FIELD_MESSAGE);
+    buildValidationFailedResult(REQUIRED_FIELD_MESSAGE);

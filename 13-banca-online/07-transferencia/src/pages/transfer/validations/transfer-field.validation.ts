@@ -12,7 +12,7 @@ import {
   INVALID_REAL_DATE_TRANSFER_MESSAGE,
   buildRequiredFieldValidationFailedResponse,
   buildValidationSucceeded,
-  buildValidationFailedResponse,
+  buildValidationFailedResult,
 } from "@/common/validations";
 
 export const validateAccountIdField = (
@@ -31,7 +31,7 @@ export const validateIBANField = (value: string): FieldValidationResult => {
   }
 
   if (!isValidIban(value)) {
-    return buildValidationFailedResponse(INVALID_IBAN_MESSAGE);
+    return buildValidationFailedResult(INVALID_IBAN_MESSAGE);
   }
 
   return buildValidationSucceeded();
@@ -47,7 +47,7 @@ export const validateNameField = (value: string): FieldValidationResult => {
 
 export const validateAmountField = (value: number): FieldValidationResult => {
   if (!isPositiveNumber(value)) {
-    return buildValidationFailedResponse(INVALID_AMOUNT_MESSAGE);
+    return buildValidationFailedResult(INVALID_AMOUNT_MESSAGE);
   }
 
   return buildValidationSucceeded();
@@ -65,14 +65,14 @@ export const validateNotesField = (_: string): FieldValidationResult =>
   buildValidationSucceeded();
 
 export const validateRealDateTransferField = (
-  value?: Date
+  value?: string
 ): FieldValidationResult => {
   if (!isValueNotNullOrUndefined(value)) {
     return buildValidationSucceeded();
   }
 
   if (value && !isDateAfterToday(value)) {
-    return buildValidationFailedResponse(INVALID_REAL_DATE_TRANSFER_MESSAGE);
+    return buildValidationFailedResult(INVALID_REAL_DATE_TRANSFER_MESSAGE);
   }
 
   return buildValidationSucceeded();
@@ -84,7 +84,7 @@ export const validateEmailField = (value?: string): FieldValidationResult => {
   }
 
   if (value && !isEMailWellFormed(value)) {
-    return buildValidationFailedResponse(INVALID_EMAIL_MESSAGE);
+    return buildValidationFailedResult(INVALID_EMAIL_MESSAGE);
   }
 
   return buildValidationSucceeded();

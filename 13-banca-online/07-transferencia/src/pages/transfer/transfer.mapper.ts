@@ -19,5 +19,5 @@ export const mapTransferFromVmToApi = (
   concept: transfer.concept,
   notes: transfer.notes,
   transferDate: new Date().toDateString(),
-  realTransferDate: transfer.realDateTransfer?.toDateString() ?? "",
+  realTransferDate: transfer.realDateTransfer ?? "",
 });

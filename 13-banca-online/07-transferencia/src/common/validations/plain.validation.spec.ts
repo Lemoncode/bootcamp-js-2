@@ -98,7 +98,7 @@ describe("plain.validation", () => {
       date.setDate(date.getDate() + 1);
 
       // Act
-      const result = isDateAfterToday(date);
+      const result = isDateAfterToday(date.toISOString());
 
       // Assert
       expect(result).toBeTruthy();
@@ -110,7 +110,7 @@ describe("plain.validation", () => {
       date.setDate(date.getDate() - 1);
 
       // Act
-      const result = isDateAfterToday(date);
+      const result = isDateAfterToday(date.toISOString());
 
       // Assert
       expect(result).toBeFalsy();
@@ -121,7 +121,7 @@ describe("plain.validation", () => {
       const date = new Date();
 
       // Act
-      const result = isDateAfterToday(date);
+      const result = isDateAfterToday(date.toISOString());
 
       // Assert
       expect(result).toBeFalsy();
