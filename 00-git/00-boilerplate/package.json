@@ -2,7 +2,6 @@
   "name": "00-boilerplate",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "build": "rimraf dist && parcel ./src/index.html",
     "build:prod": "rimraf dist && parcel build ./src/index.html",
